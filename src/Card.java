@@ -3,7 +3,13 @@
  * Created 2020-11-04
  *
  * @author Magnus Silverdal
+ *
+ *
+ * Forked 2020-11-09
+ *
+ * Adam Nilsson
  */
+
 public class Card implements Comparable<Card>{
     private Suits suit;
     private int value;
@@ -58,13 +64,4 @@ public class Card implements Comparable<Card>{
     }
 
     enum Suits {SPADE,HEART,DIAMOND,CLUB};
-
-    public static void main(String[] args) {
-        Card aceOfSpades = new Card(Suits.SPADE, 1);
-        Card twoOfHearts = new Card(Suits.HEART, 2);
-        System.out.println(aceOfSpades + ", " + twoOfHearts);
-        if (aceOfSpades.compareTo(twoOfHearts) > 0) {
-            System.out.println("Ace of spades beats two of hearts");
-        }
-    }
 }
